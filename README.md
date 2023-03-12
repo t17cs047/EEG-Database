@@ -18,3 +18,23 @@
 
 「PreprocessedData」でも同様に, 直下に「S（被験者番号）.fif」フォルダが並んでいて,
 それぞれの被験者の前処理後のデータが FIF 形式で記録されている.
+
+
+The database consists of an "ExperimentInformation" folder in which the information on the subjects and the music they listened to are recorded, a "RawData" folder in which the sensory evaluation values and EEG data before preprocessing are recorded, and a "PreprocessedData" folder in which the EEG data after preprocessing are recorded.
+The "PreprocessedData" folder contains the EEG data after the preprocessing.
+
+MusicInformation.xlsx" in the "ExperimentInformation" folder contains information on the music played to the subjects. The serial number of the music in this experiment, the music number of the corresponding DEAP dataset, and the emotion classification (1:HVHA, 2:LVHA, 3:HVLA, 4:LVLA) are recorded in this folder. 
+SubjectsInformation.xlsx" contains subject numbers and their corresponding gender (M: Male, F: Female) and nationality (J: Japanese, C: Chinese). 
+
+The "RawData" folder has a "s (subject number)" folder directly under it, and each subject's data can be accessed.
+The "RawData" folder has "s (subject number)" folders directly under it, and you can access the data of each subject. Each folder consists of a "CSV" folder, an "EDF" folder, and a "Label.
+Each folder consists of a "CSV" folder, an "EDF" folder, and a "Label.xlsx" file.
+
+In the "CSV" folder, the subject's EEG data for each song are stored in CSV format with the file name "(song number) ~ .csv".
+In the "CSV" folder, the subjects' EEG data are stored in CSV format under the file name "(song number) ~ .csv". The amplitude (μV) of 32 channels measured at 128 Hz is recorded.
+(μV) of 32 channels measured at 128 Hz are recorded. Similarly, the "EDF" folder records EEG data in EDF format.
+The "EDF" folder also contains EEG data in EDF format. The "Label.xlsx" file records the subject's nationality, gender, and the subject's sensitivity
+evaluation values for each song.
+
+Similarly, in the "PreprocessedData" folder, there is a "S (subject number).fif" folder directly below the "Label.xlsx" file,
+The preprocessed data of each subject is recorded in FIF format.
